@@ -11,6 +11,11 @@ export const setLoading = (payload) => ({
     payload
 })
 
+export const setFavorite = (payload) => ({
+    type: actionTypes.SET_FAVORITE,
+    payload
+})
+
 export const getPokemonsDetails = (pokemons = []) => async (dispatch) => {
     const pokedetailed = await Promise.all(pokemons.map(poke => getPokemonDetail(poke)))
     dispatch(setPokemons(pokedetailed))

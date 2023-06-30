@@ -1,4 +1,4 @@
-import { PokeCard } from "../PokeCard";
+import PokeCard from "../PokeCard";
 import './pokeList.css'
 const PokeList = ({pokes}) => {
     return (
