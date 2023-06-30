@@ -6,7 +6,7 @@ const PokeCard = ({poke}) => {
 
     return <Card 
         title={poke.name}
-        cover={<img src={poke.url} alt='elmo'/>}
+        cover={<img src={poke.sprites?.front_default} alt={poke.name}/>}
         extra={< StarOutlined />}
     >
         <Meta description='magical'/>
