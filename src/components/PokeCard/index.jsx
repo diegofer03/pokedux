@@ -3,7 +3,8 @@ import {Button, Card} from 'antd'
 import Meta from 'antd/lib/card/Meta'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setFavorite } from '../../actions'
+import { setFavorite } from '../../slices/pokemonSlices'
+// import { setFavorite } from '../../actions'
 
 const PokeCard = ({poke}) => {
     const pokelist = useSelector(state => state.pokemons.pokemons)

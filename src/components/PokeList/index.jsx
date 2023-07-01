@@ -1,6 +1,7 @@
 import PokeCard from "../PokeCard";
 import './pokeList.css'
 const PokeList = ({pokes}) => {
+    console.log(pokes)
     return (
         <div className="pokelist">
             {pokes.map((poke, index)=>{
