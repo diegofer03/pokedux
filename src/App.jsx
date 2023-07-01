@@ -5,12 +5,12 @@ import { PokeList } from './components/PokeList'
 import logo from './assets/logo.svg'
 import { getPokemon } from './api'
 import { getPokemonsDetails, setLoading } from './actions'
-import { useDispatch, useSelector } from 'react-redux'
+import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import { Spin } from 'antd'
 
 function App() {
-  const pokemons = useSelector(state => state.pokemons.pokemons)
-  const loading = useSelector(state => state.ui.loading)
+  const pokemons = useSelector(state => state.pokemons.pokemons, shallowEqual)
+  const loading = useSelector(state => state.ui.loading, shallowEqual)
   const dispatch = useDispatch()
   React.useEffect(()=> {
     const fetchPokes = async() => {
