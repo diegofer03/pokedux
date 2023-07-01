@@ -1,16 +1,11 @@
 const initialState = {
     pokemons : [],
-    loading: false
 }
 
 const pokemonObj = (state, payload) => ({
     'SET_POKEMONS' : {
         ...state,
         pokemons : payload
-    },
-    'SET_LOADING' : {
-        ...state,
-        loading: payload
     },
     'SET_FAVORITE': {
         ...state,

@@ -6,9 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setFavorite } from '../../actions'
 
 const PokeCard = ({poke}) => {
-    const pokelist = useSelector(state => state.pokemons)
+    const pokelist = useSelector(state => state.pokemons.pokemons)
     const dispatch = useDispatch()
-    const [favorite, setisFavorite] = React.useState(poke.isFavorite)
     const Icon = poke.isFavorite ? StarFilled : StarOutlined 
     const handleFavorite = () => {
         const newValues = pokelist.map((element) =>
